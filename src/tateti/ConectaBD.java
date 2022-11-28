@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.sql.ResultSet;
-
+ 
 public class ConectaBD {
 	private String conexion;
 	private String usuario;
@@ -17,7 +17,7 @@ public class ConectaBD {
 	public ConectaBD(String conexion, String usuario, String contraseña) {
 		this.conexion = "localhost:0/Tateti";
 		this.usuario = "root";
-		this.contraseña = "Thiago23";
+		this.contraseña = "";
 		try {
 			this.miConexion = DriverManager.getConnection("jdbc:mysql://" + this.conexion,this.usuario,this.contraseña);
 		}
