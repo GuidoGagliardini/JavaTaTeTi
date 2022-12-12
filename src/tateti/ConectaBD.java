@@ -8,18 +8,17 @@ import java.time.LocalDateTime;
 import java.sql.ResultSet;
  
 public class ConectaBD {
-	private String conexion;
-	private String usuario;
-	private String contraseña;
+	// private String conexion;
+	// private String usuario;
+	// private String contraseña;
 	private Connection miConexion;
 	
 	
 	public ConectaBD(String conexion, String usuario, String contraseña) {
-		this.conexion = "localhost:0/Tateti";
-		this.usuario = "root";
-		this.contraseña = "";
+
 		try {
-			this.miConexion = DriverManager.getConnection("jdbc:mysql://" + this.conexion,this.usuario,this.contraseña);
+			this.miConexion = DriverManager.getConnection("jdbc:mysql://" + conexion,usuario,contraseña);
+			System.out.println("Base de datos conectada" + "" + usuario);
 		}
 		
 		catch(Exception e) {

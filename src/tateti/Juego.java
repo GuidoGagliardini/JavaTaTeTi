@@ -3,13 +3,16 @@ package tateti;
 import java.util.Scanner;
 import java.lang.Math;
 import java.time.LocalDateTime;
+import java.util.Map;
+
 
 public class Juego {
 
 	public static void main(String[] args) {
+		String password = System.getenv("testPassword");
 		Scanner lector = new Scanner(System.in);
 		Tablero tablero = new Tablero();
-		ConectaBD bd = new ConectaBD("localhost:3306/Tateti","root","almitasol20");
+		ConectaBD bd = new ConectaBD("localhost:3306/Tateti","root",password);
 		int idioma = seleccionarIdioma(bd, lector);
 		imprimirBienvenida(bd,idioma);
 		String nombreJugador = solicitarNombre(bd, idioma, lector);
