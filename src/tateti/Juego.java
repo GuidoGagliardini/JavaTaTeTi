@@ -3,7 +3,6 @@ package tateti;
 import java.util.Scanner;
 import java.lang.Math;
 import java.time.LocalDateTime;
-import java.util.Map;
 
 
 public class Juego {
